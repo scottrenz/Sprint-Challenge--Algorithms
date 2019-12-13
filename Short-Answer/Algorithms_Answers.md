@@ -29,4 +29,5 @@ This way zero are dropped and zero are broken.
 zero + zero = zero
 That is the minimum
 Therefor, any value of f will be fine
+The complexity is constant
 
