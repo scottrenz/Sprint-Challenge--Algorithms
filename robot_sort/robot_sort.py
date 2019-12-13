@@ -117,9 +117,6 @@ class SortingRobot:
                     SortingRobot.move_left(self)
                     SortingRobot.swap_item(self)
                     SortingRobot.move_right(self)
-                    
-
-    
             # for i in range(1, len(l) ):
             #     if i == 1:
             #         SortingRobot.set_light_off(self)
