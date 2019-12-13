@@ -32,3 +32,5 @@ I am required to drop at least one egg from each floor.
 I would make a recursive module that would determine all the possilble ways that the eggs could be thrown from each floor with an eating cookies algorith.
 I would make a module that would loop increasing f from floor one to the top and loop through the results throwing that number of eggs from each floor as determined from the other module and would accumulate for each of the number of ways, the number of eggs broken based on if they were above floor f or not.
 I would give a result showing for each f the best strategy for breaking the least number of eggs based on finding the minumum number brokne with that f floor.
+
+The run time complexity would be O(n log n)
