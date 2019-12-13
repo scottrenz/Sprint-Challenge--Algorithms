@@ -100,19 +100,15 @@ class SortingRobot:
         
         if len(self._list) < 2:
             return self._list
-        # d = True
         SortingRobot.set_light_on(self)
         while SortingRobot.light_is_on(self):
-        # while d:
             for i in range(1, len(self._list) ):
                 if i == 1:
-                    # d = False
                     SortingRobot.set_light_off(self)
                 if self._list[i] < self._list[i - 1]:
                     SortingRobot.set_light_on(self)
                     while SortingRobot.can_move_left(self):
                         SortingRobot.move_left(self)
-                    # print(l) 
                     for j in range(i-1):
                         SortingRobot.move_right(self)
                     SortingRobot.swap_item(self)
@@ -120,11 +116,6 @@ class SortingRobot:
                     SortingRobot.swap_item(self)
                     SortingRobot.move_left(self)
                     SortingRobot.swap_item(self)
-                    # print(l)
-                    # exit()
-
-                    # l[i], l[i - 1] = l[i - 1], l[i]
-                    # d = True
         return self._list
 
 
