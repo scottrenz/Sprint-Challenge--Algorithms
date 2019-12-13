@@ -98,17 +98,17 @@ class SortingRobot:
         """
         # Fill this out
         
-        if len(SortingRobot.list) < 2:
-            return SortingRobot._list
+        if len(self._list) < 2:
+            return self._list
         # d = True
         SortingRobot.set_light_on(self)
         while SortingRobot.light_is_on(self):
         # while d:
-            for i in range(1, len(SortingRobot._list) ):
+            for i in range(1, len(self._list) ):
                 if i == 1:
                     # d = False
                     SortingRobot.set_light_off(self)
-                if SortingRobot._list[i] < SortingRobot._list[i - 1]:
+                if self._list[i] < self._list[i - 1]:
                     SortingRobot.set_light_on(self)
                     while SortingRobot.can_move_left(self):
                         SortingRobot.move_left(self)
@@ -125,7 +125,7 @@ class SortingRobot:
 
                     # l[i], l[i - 1] = l[i - 1], l[i]
                     # d = True
-        return l
+        return self._list
 
 
 if __name__ == "__main__":
