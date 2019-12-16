@@ -97,7 +97,42 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+        if SortingRobot.can_move_left(self) or SortingRobot.can_move_right(self) == False:
+            return
+        SortingRobot.set_light_on(self)
+        while SortingRobot.light_is_on(self):
+            SortingRobot.set_light_off(self)
+            while SortingRobot.can_move_left(self):
+                SortingRobot.move_left(self)
+            while SortingRobot.can_move_right(self):
+                SortingRobot.swap_item(self)
+                SortingRobot.move_right(self)
+                if SortingRobot.compare_item(self) == 1:
+                    SortingRobot.set_light_on(self)
+                    SortingRobot.swap_item(self)
+                    SortingRobot.move_left(self)
+                    SortingRobot.swap_item(self)
+                    SortingRobot.move_right(self)
+                else:
+                    SortingRobot.move_left(self)
+                    SortingRobot.swap_item(self)
+                    SortingRobot.move_right(self)
+            # for i in range(1, len(l) ):
+            #     if i == 1:
+            #         SortingRobot.set_light_off(self)
+            #     if l[i] < l[i - 1]:
+            #         SortingRobot.set_light_on(self)
+            #         while SortingRobot.can_move_left(self):
+            #             SortingRobot.move_left(self)
+            #         for j in range(i-1):
+
+            #             SortingRobot.move_right(self)
+            #         SortingRobot.swap_item(self)
+            #         SortingRobot.move_right(self)
+            #         SortingRobot.swap_item(self)
+            #         SortingRobot.move_left(self)
+            #         SortingRobot.swap_item(self)
+        return
 
 
 if __name__ == "__main__":
